@@ -1,25 +1,32 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>METV Checker</title>
-  <link rel="stylesheet" href="style.css">
-</head>
-<body>
-  <div class="container">
-  <p class="coop-name">Iwahori Multi-Purpose Cooperative</p>
+<div class="wrapper">
+  <div class="card">
+      <p class="coop-name">Iwahori Multi-Purpose Cooperative</p>
+    <h1>Are You A METV?</h1>
 
-  <h1> Are you a METV?</h1>
+    <p class="subtitle">
+      Enter your full name<br>
+      <span>Example: Dela Cruz, Juan Banta</span>
+    </p>
 
-  <p>(Last Name, First Name Middle Initial)</p>
-  <p>Example: Cruz, Joy L.</p>
+    <div class="form">
+      <div class="field">
+        <label>Last Name</label>
+        <input type="text" id="lastname" placeholder="Dela Cruz">
+      </div>
 
-  <input type="text" id="nameInput" placeholder="Type your full name..." />
-  <button onclick="checkName()">Check</button>
-  <p id="result"></p>
+      <div class="field">
+        <label>First Name</label>
+        <input type="text" id="firstname" placeholder="Juan">
+      </div>
+
+      <div class="field">
+        <label>Middle Name</label>
+        <input type="text" id="middlename" placeholder="Banta">
+      </div>
+    </div>
+
+    <button onclick="checkMETV()">Check Status</button>
+
+    <div id="result"></div>
+  </div>
 </div>
-
-  <script src="script.js"></script>
-</body>
-</html>
