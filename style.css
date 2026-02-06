@@ -1,91 +1,130 @@
-* {
+* 
+
+{
   box-sizing: border-box;
   font-family: "Segoe UI", Arial, sans-serif;
 }
 
 body {
   margin: 0;
-  background: linear-gradient(135deg, #0a3fa8, #f5b400);
   min-height: 100vh;
+  background: linear-gradient(135deg, #0b4aa2, #f1b600);
+}
+
+/* CENTER CONTENT */
+.wrapper {
+  width: 100%;
+  min-height: 100vh;
+  padding: 16px;
   display: flex;
   align-items: center;
   justify-content: center;
 }
 
-.wrapper {
-  width: 100%;
-  padding: 20px;
-}
 
+/* BIGGER CARD FOR PHONE */
 .card {
   background: #fff;
-  max-width: 520px;
-  margin: auto;
-  padding: 40px 35px;
-  border-radius: 22px;
-  box-shadow: 0 20px 45px rgba(0,0,0,0.2);
-  text-align: center;
+  width: 100%;
+  max-width: 420px; /* mas malaki sa phone */
+  padding: 28px 22px;
+  border-radius: 20px;
+  box-shadow: 0 18px 40px rgba(0,0,0,0.25);
 }
 
+
+/* TITLE */
 h1 {
-  color: #0a3fa8;
+  text-align: center;
+  color: #0b4aa2;
+  font-size: 24px;         /* ⬅️ bigger */
+  margin-bottom: 12px;
 }
 
+/* SUBTITLE */
 .subtitle {
-  font-size: 14px;
+  text-align: center;
+  font-size: 15px;
   color: #555;
-  margin-bottom: 30px;
+  margin-bottom: 24px;
 }
 
 .subtitle span {
-  color: #0a3fa8;
-  font-weight: 600;
+  color: #777;
+  font-size: 14px;
 }
 
+/* FORM */
 .form {
-  display: grid;
-  gap: 15px;
-}
-
-.field {
-  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
 label {
-  font-size: 13px;
+  font-size: 14px;
   font-weight: 600;
   margin-bottom: 6px;
-  display: block;
 }
 
+/* INPUTS – BIG FOR THUMBS */
 input {
   width: 100%;
-  padding: 14px;
-  border-radius: 12px;
-  border: 2px solid #e6e6e6;
-  font-size: 15px;
+  padding: 16px;          /* ⬅️ taller */
+  font-size: 17px;        /* ⬅️ no zoom bug */
+  border-radius: 14px;
+  border: 1px solid #ccc;
 }
 
 input:focus {
   outline: none;
-  border-color: #f5b400;
-  box-shadow: 0 0 0 3px rgba(245,180,0,0.25);
+  border-color: #f1b600;
+  box-shadow: 0 0 0 3px rgba(241,182,0,0.25);
 }
 
+/* BUTTON – FULL WIDTH & BIG */
 button {
-  margin-top: 25px;
+  margin-top: 26px;
   width: 100%;
-  padding: 15px;
-  background: #0a3fa8;
-  color: #fff;
-  border: none;
-  border-radius: 14px;
-  font-size: 17px;
+  padding: 18px;
+  font-size: 18px;
   font-weight: bold;
-  cursor: pointer;
+  border-radius: 16px;
+  border: none;
+  background: #0b4aa2;
+  color: #fff;
 }
 
+/* RESULT */
 #result {
-  margin-top: 25px;
-  font-size: 18px;
+  margin-top: 20px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 600;
 }
+
+@media (max-width: 480px) {
+
+  h1 {
+    font-size: 22px;
+  }
+
+  .subtitle {
+    font-size: 14px;
+  }
+
+  label {
+    font-size: 14px;
+  }
+
+  input {
+    font-size: 16px; /* para hindi mag-zoom weird sa iPhone */
+    padding: 16px;
+  }
+
+  button {
+    font-size: 18px;
+    padding: 16px;
+  }
+}
+
